@@ -39,18 +39,20 @@ route.post('/setConfession', (req, res) => {
 			<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; width: 100%; max-width: 450px; margin: 20px auto; text-align: center;">
 				
 				<!-- NGL Card Style -->
-				<div style="border-radius: 25px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+				<!-- Added border as fallback for shadow, and forced background color -->
+				<div style="border-radius: 25px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid rgba(0,0,0,0.1); background-color: #fffffe !important;">
 					
 					<!-- Header -->
 					<div style="background: linear-gradient(45deg, #FF0055 0%, #FF5500 100%); padding: 35px 20px;">
-						<h1 style="color: white; font-size: 24px; font-weight: 800; margin: 0; line-height: 1.2; text-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+						<h1 style="color: #ffffff !important; font-size: 24px; font-weight: 800; margin: 0; line-height: 1.2; text-shadow: 0 1px 3px rgba(0,0,0,0.2);">
 							¡Mándame mensajes<br>anónimos!
 						</h1>
 					</div>
 					
 					<!-- Message Body -->
-					<div style="background-color: white; padding: 40px 30px;">
-						<p style="color: black; font-size: 22px; font-weight: 700; margin: 0; line-height: 1.4; word-wrap: break-word;">
+					<!-- Forced black text and white background with !important -->
+					<div style="background-color: #fffffe !important; padding: 40px 30px;">
+						<p style="color: #000000 !important; font-size: 22px; font-weight: 700; margin: 0; line-height: 1.4; word-wrap: break-word;">
 							${message}
 						</p>
 					</div>
@@ -60,7 +62,7 @@ route.post('/setConfession', (req, res) => {
 				<br/><br/>
 				
 				<!-- Metadata -->
-				<div style="text-align: left; font-size: 14px; color: #666; background: #f9f9f9; padding: 20px; border-radius: 12px; line-height: 26px; border: 1px solid #eee;">
+				<div style="text-align: left; font-size: 14px; color: #666666 !important; background: #f9f9f9 !important; padding: 20px; border-radius: 12px; line-height: 26px; border: 1px solid #eeeeee;">
 					🌐 &nbsp; Ip: <b>${ip}</b><br/>
 					🏙️ &nbsp; City: <b>${city}</b><br/>
 					🌎 &nbsp; Region: <b>${region}</b><br/>
